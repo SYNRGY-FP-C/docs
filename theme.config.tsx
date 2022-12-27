@@ -1,18 +1,23 @@
-import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
+import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
+  logo: <span className="font-bold">Bapakos</span>,
+
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: "https://github.com/SYNRGY-FP-C/docs",
   },
   chat: {
-    link: 'https://discord.com',
+    link: "https://discord.gg/9xrNTJKQ",
   },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  docsRepositoryBase: "https://github.com/SYNRGY-FP-C/docs",
   footer: {
-    text: 'Nextra Docs Template',
+    text: <>{new Date().getFullYear()} © Synrgy FP-C API Docs.</>,
   },
-}
+  useNextSeoProps: () => {
+    return {
+      titleTemplate: "%s – Synrgy C",
+    };
+  },
+};
 
-export default config
+export default config;

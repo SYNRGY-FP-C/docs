@@ -1,0 +1,56 @@
+import Badge from "@components/Badge";
+
+# Title
+
+Description
+
+**Method :** <Badge variant="warning">POST</Badge>
+
+**URL :** <Badge>/test</Badge>
+
+**Content type :** <Badge>application/json</Badge>
+
+**Request :**
+
+```json
+{
+  "title": "string",
+  "cover?": "string",
+  "description?": "string",
+  "price": "number"
+}
+```
+
+**Response :** <Badge outline variant="success">200 OK</Badge>
+
+```json
+{
+  "code": 200,
+  "status": "success",
+  "data": []
+}
+```
+
+**Response :** <Badge outline variant="info">422 UNPROCESSABLE CONTENT</Badge>
+
+```json
+{
+  "code": 422,
+  "status": "unprocessed",
+  "error": [
+    {
+      "title": ["Title required"]
+    }
+  ]
+}
+```
+
+**Response :** <Badge outline variant="danger">500 ERROR</Badge>
+
+```json
+{
+  "code": 500,
+  "status": "server error",
+  "error": "Internal Server Error"
+}
+```
