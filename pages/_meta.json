@@ -1,6 +1,5 @@
 {
   "index": "Introduction",
-  "users": "Users",
-  "flats": "Flats",
-  "transactions": "Transactions"
+  "components": "Components",
+  "apis": "API"
 }

@@ -1,0 +1,29 @@
+import Badge from "@components/built-in/Badge";
+
+## Get Current User `MVP`
+
+**Request :**
+
+- Method : <Badge method="GET">GET</Badge>
+- Endpoint : `/api/users/me`
+- Headers :
+  - `Authorization: Bearer accessToken`
+  - `Content-Type: application/json`
+  - `Accept: application/json`
+
+**Response :** <Badge outline variant="success">200 OK</Badge>
+
+```json
+{
+  "code": "number",
+  "status": "string, enum",
+  "data": {
+    "id": "string, unique",
+    "fullname": "string",
+    "avatar": "string",
+    "gender": "string, enum",
+    "phone": "string|number",
+    "role": "string, enum"
+  }
+}
+```

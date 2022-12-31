@@ -1,0 +1,27 @@
+import Badge from "@components/built-in/Badge";
+
+## Delete Room by ID
+
+**Request :**
+
+- Method : <Badge method="DELETE">DELETE</Badge>
+- Endpoint : `/api/rooms/:roomId`
+- Authorization: `ADMIN only`
+- Headers :
+  - `Authorization: Bearer accessToken`
+  - `Content-Type: application/json`
+  - `Accept: application/json`
+
+**Response :** <Badge outline variant="success">204 No Content</Badge>
+
+`or`
+
+**Response :** <Badge outline variant="success">200 OK</Badge>
+
+```json
+{
+  "code": "number",
+  "status": "string, enum",
+  "data": null
+}
+```

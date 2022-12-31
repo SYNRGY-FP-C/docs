@@ -1,0 +1,41 @@
+import Badge from "@components/built-in/Badge";
+
+## Update Room by ID
+
+**Request :**
+
+- Method : <Badge method="PUT">PUT</Badge>
+- Endpoint : `/api/rooms/:roomId`
+- Authorization: `ADMIN only`
+- Headers :
+  - `Authorization: Bearer accessToken`
+  - `Content-Type: application/json`
+  - `Accept: application/json`
+
+**Body :**
+
+```json
+{
+  "title": "string",
+  "description": "string",
+  "type": "string|enum",
+  "payment_period": "string|enum",
+  "images": ["string"],
+  "location": "string",
+  "facilities": ["string"]
+}
+```
+
+**Response :** <Badge outline variant="success">204 No Content</Badge>
+
+`or`
+
+**Response :** <Badge outline variant="success">200 OK</Badge>
+
+```json
+{
+  "code": "number",
+  "status": "string, enum",
+  "data": null
+}
+```

@@ -1,7 +1,8 @@
 import { DocsThemeConfig } from "nextra-theme-docs";
 
+import Logo from "./components/built-in/Logo";
 const config: DocsThemeConfig = {
-  logo: <span className="font-bold">Bapakos</span>,
+  logo: Logo,
 
   project: {
     link: "https://github.com/SYNRGY-FP-C/docs",
@@ -11,11 +12,11 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: "https://github.com/SYNRGY-FP-C/docs",
   footer: {
-    text: <>{new Date().getFullYear()} © Synrgy FP-C API Docs.</>,
+    text: <> {new Date().getFullYear()} © Synrgy FP Team C Dev Docs.</>,
   },
   useNextSeoProps: () => {
     return {
-      titleTemplate: "%s – Synrgy C",
+      titleTemplate: "%s – Synrgy FP Team C",
     };
   },
 };
