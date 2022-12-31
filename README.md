@@ -1,23 +1,11 @@
-# Nextra Docs Template 
+# How to contribute to the project
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
+- Clone repository (pertama kali)
+- Checkout ke branch `master`
+- Buat branch baru dengan pattern `comp/namacomp` , branch `master` sebagai parrentnya nanti PR ke sana
+- Ngoding di branch yang baru dibuat yaitu `comp/namacomp`
+- Ketika sudah selesai, Pull dulu dari branch `master` (mastiin gada konflik)
+- Add, Commit dan Push ke branch `comp/namacomp`
+- Pull Request ke branch `master` di github
 
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
-
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
-
-## Quick Start
-
-Click the button to clone this repository and deploy it on Vercel:
-
-[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
-
-## Local Development
-
-First, run `pnpm i` to install the dependencies.
-
-Then, run `pnpm dev` to start the development server and visit localhost:3000.
-
-## License
-
-This project is licensed under the MIT License.
+Kalo mau nambah fitur lagi (ngerjain task) lakuin dari step 2 + pull dulu ke branch `master`, sisanya sama aja
