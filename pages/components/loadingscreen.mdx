@@ -1,0 +1,28 @@
+import LoadingScreen from "@components/LoadingScreen";
+
+## Badge
+
+| Props    | Type    | Required | Default |
+| -------- | ------- | -------- | ------- |
+| redirect | boolean | false    | `false` |
+| page     | string  | false    | `login` |
+
+## Example
+
+```tsx filename=Example
+<LoadingScreen/>
+<LoadingScreen redirect/>
+<LoadingScreen redirect page="profile"/>
+```
+
+<div className="flex flex-col gap-y-3">
+  <div className="relative">
+    <LoadingScreen />
+  </div>
+  <div className="relative">
+    <LoadingScreen redirect />
+  </div>
+  <div className="relative">
+    <LoadingScreen redirect page="profile" />
+  </div>
+</div>

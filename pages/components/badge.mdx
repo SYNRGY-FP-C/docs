@@ -2,12 +2,12 @@ import Badge from "@components/built-in/Badge";
 
 ## Badge
 
-| Props    | Type              | Required | Default |
-| -------- | ----------------- | -------- | ------- |
-| variant  | string, enum      | false    | primary |
-| outline  | boolean           | false    | false   |
-| method   | string, enum      | false    | null    |
-| children | string, ReactNode | true     | Badge   |
+| Props    | Type              | Required | Default   |
+| -------- | ----------------- | -------- | --------- |
+| variant  | string, enum      | false    | `primary` |
+| outline  | boolean           | false    | `false`   |
+| method   | string, enum      | false    | `null`    |
+| children | string, ReactNode | true     | `Badge`   |
 
 Variants:
 
@@ -33,7 +33,10 @@ Methods:
 <Badge method="POST">Example Badge</Badge>
 ```
 
-- <Badge variant="primary">Example</Badge>
-- <Badge variant="success" outline>Example</Badge>
-- <Badge variant="info">Example</Badge>
-- <Badge method="PUT">Example</Badge>
+{" "}
+<Badge variant="primary">Example</Badge>
+<Badge variant="success" outline>
+  Example
+</Badge>
+<Badge variant="info">Example</Badge>
+<Badge method="PUT">Example</Badge>

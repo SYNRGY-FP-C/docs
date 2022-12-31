@@ -49,7 +49,7 @@ export default function Badge({
   return (
     <span
       className={clsx(
-        "px-2 py-1 rounded",
+        "px-2 py-1 rounded inline-block",
         {
           "font-medium": method,
         },
