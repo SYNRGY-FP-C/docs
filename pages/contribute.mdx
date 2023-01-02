@@ -2,42 +2,58 @@
 
 1. Clone repository
 
-```bash
+```bash filename="Pattern"
 git clone -b <branchname>  <remote-repo-url>
 ```
 
-```bash filename="Using SSH"
+```bash filename="Example Using SSH"
 git clone -b development git@github.com:SYNRGY-FP-C/docs.git
 ```
 
-```bash filename="Using HTTPS"
+```bash filename="Example Using HTTPS"
 git clone -b development https://github.com/SYNRGY-FP-C/docs.git
 ```
 
 2. Checkout branch feature/namafitur
 
-```bash
-git checkout -b feature/namafitur
+```bash filename="Pattern"
+git checkout -b feature/namafitur-step
+```
+
+```bash filename="Example"
+git checkout -b feature/login-slicing
 ```
 
 3. Pull dari branch development
 
-```bash
+```bash filename="Pattern"
+git pull origin <parrent-branch>
+```
+
+```bash filename="Example"
 git pull origin development
 ```
 
 4. Add, Commit dan Push ke branch feature/namafitur
 
-```bash
+```bash filename="Pattern"
 git add .
 ```
 
-```bash
+```bash filename="Pattern"
 git commit -m "commit message"
 ```
 
-```bash
+```bash filename="Example"
+git commit -m "slicing login page"
+```
+
+```bash filename="Pattern"
 git push origin feature/namafitur
+```
+
+```bash filename="Example"
+git push origin feature/login-slicing
 ```
 
 5. Pull Request ke branch development di github
