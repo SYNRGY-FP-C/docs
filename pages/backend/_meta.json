@@ -1,0 +1,5 @@
+{
+  "controller": "Controller",
+  "middleware": "Middleware",
+  "model": "Model"
+}

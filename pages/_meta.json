@@ -1,6 +1,7 @@
 {
   "index": "Introduction",
   "contribute": "Contribute",
-  "components": "Components",
+  "frontend": "Frontend",
+  "backend": "Backend",
   "apis": "API"
 }

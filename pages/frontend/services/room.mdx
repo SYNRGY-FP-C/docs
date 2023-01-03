@@ -1,0 +1,150 @@
+## Room Service
+
+Room service adalah instance axios yang sudah di set base url dan endpointnya untuk mengakses API room.
+
+## Scope
+
+- List Room / Search Page
+- Detail Room Page
+- Admin (Penyewa) Page
+
+## Usage
+
+```js
+import roomService from "@services/roomService";
+
+// must in async function
+const response = await roomService.create(data);
+const response = await roomService.getAll();
+const response = await roomService.get(id);
+const response = await roomService.update(id, data);
+const response = await roomService.delete(id);
+```
+
+### Create Room
+
+```js filename="Example CreateRoom"
+import roomService from "@services/roomService";
+
+const [response, setResponse] = useState({
+  isLoading: false,
+  isError: false,
+});
+
+const [form, setForm] = useState({
+  title: "",
+  description: "",
+  type: "",
+  price: "",
+});
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setResponse({ isLoading: true, isError: false });
+  try {
+    const response = await roomService.create(form);
+    setResponse({ isLoading: false, isError: false });
+  } catch (error) {
+    setResponse({ isLoading: false, isError: true });
+  }
+};
+```
+
+### Get All Rooms
+
+```js filename="Example GetAllRooms"
+import roomService from "@services/roomService";
+
+const [response, setResponse] = useState({
+  isLoading: false,
+  isError: false,
+  data: [],
+});
+
+const fetchAllRoomData = async () => {
+  setResponse({ isLoading: true, isError: false, data: [] });
+  try {
+    const response = await roomService.getAll();
+    setResponse({ isLoading: false, isError: false, data: response.data });
+  } catch (error) {
+    setResponse({ isLoading: false, isError: true, data: [] });
+  }
+};
+```
+
+### Get Room By Id
+
+```js filename="Example GetRoomById"
+import roomService from "@services/roomService";
+
+const [response, setResponse] = useState({
+  isLoading: false,
+  isError: false,
+  data: {},
+});
+
+const fetchRoomData = async (id) => {
+  setResponse({ isLoading: true, isError: false, data: {} });
+  try {
+    const response = await roomService.get(id);
+    setResponse({ isLoading: false, isError: false, data: response.data });
+  } catch (error) {
+    setResponse({ isLoading: false, isError: true, data: {} });
+  }
+};
+```
+
+### Update Room
+
+```js filename="Example UpdateRoom"
+import roomService from "@services/roomService";
+
+const [response, setResponse] = useState({
+  isLoading: false,
+  isError: false,
+});
+
+const [form, setForm] = useState({
+  title: "",
+  description: "",
+  type: "",
+  price: "",
+});
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setResponse({ isLoading: true, isError: false });
+  try {
+    const response = await roomService.update(id, form);
+    setResponse({ isLoading: false, isError: false });
+  } catch (error) {
+    setResponse({ isLoading: false, isError: true });
+  }
+};
+```
+
+### Delete Room
+
+```js filename="Example DeleteRoom"
+import roomService from "@services/roomService";
+
+const [response, setResponse] = useState({
+  isLoading: false,
+  isError: false,
+});
+
+const handleSubmit() = async (id) => {
+  e.preventDefault();
+  setResponse({ isLoading: true, isError: false });
+  try {
+    const response = await roomService.delete(id);
+    setResponse({ isLoading: false, isError: false });
+  } catch (error) {
+    setResponse({ isLoading: false, isError: true });
+  }
+};
+```
+
+```
+
+```

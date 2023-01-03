@@ -1,0 +1,255 @@
+## AuthContext
+
+AuthContext adalah sebuah context yang berisi informasi mengenai user yang sedang login. Context ini akan digunakan untuk menentukan apakah user sudah login atau belum. Jika sudah login, maka akan menampilkan halaman Home, jika belum maka akan menampilkan halaman Login.
+
+## Scope
+
+- Login Page
+- Register Page
+- Profile Page
+- Dashboard Page
+
+## Usage
+
+```javascript
+import { useAuth } from 'react';
+
+export default function Example() {
+  // ambil yang dibutuhkan saja
+  const { isAuthenticated, isAdmin, isSuperAdmin isLoading, user, registerUser, loginUser, logoutUser, } = useAuth();
+
+  return (
+    <></>
+  )
+}
+```
+
+### isLoading
+
+```javascript filename="Example isLoading"
+import { useAuth } from "react";
+
+export default function Example() {
+  const { isLoading } = useAuth();
+
+  if (isLoading) {
+    return <>Loading...</>;
+  }
+
+  return <>Loaded</>;
+}
+```
+
+### isAuthenticated
+
+```javascript filename="Example isAuthenticated"
+import { useAuth } from "react";
+
+export default function Example() {
+  const { isLoading, isAuthenticated } = useAuth();
+
+  if (isLoading) {
+    return <>Loading...</>;
+  }
+
+  if (!isAuthenticated) {
+    return <>Unauthenticated. Redirect to login</>;
+  }
+
+  return <>Authenticated Page</>;
+}
+```
+
+### isAdmin
+
+```javascript filename="Example isAdmin"
+import { useAuth } from "react";
+
+export default function Example() {
+  const { isLoading, isAdmin } = useAuth();
+
+  if (isLoading) {
+    return <>Loading...</>;
+  }
+
+  if (!isAdmin) {
+    return <>Unauthorized. Redirect to home</>;
+  }
+
+  return <>Admin Page</>;
+}
+```
+
+### isSuperAdmin
+
+```javascript filename="Example isSuperAdmin"
+import { useAuth } from "react";
+
+export default function Example() {
+  const { isLoading, isSuperAdmin } = useAuth();
+
+  if (isLoading) {
+    return <>Loading...</>;
+  }
+
+  if (!isSuperAdmin) {
+    return <>Unauthorized. Redirect to home</>;
+  }
+
+  return <>Super Admin Page</>;
+}
+```
+
+### user
+
+```javascript filename="Example user"
+import { useAuth } from "react";
+
+export default function Example() {
+  const { user, isLoading } = useAuth();
+
+  if (isLoading) {
+    return <>Loading...</>;
+  }
+
+  return (
+    <>
+      <h1>{user.name}</h1>
+      <p>{user.email}</p>
+    </>
+  );
+}
+```
+
+### registerUser
+
+```javascript filename="Example registerUser"
+import { useAuth } from "react";
+
+export default function Example() {
+  const { registerUser, isLoading } = useAuth();
+
+  const [response, setResponse] = useState({
+    isLoading: false,
+    isError: false,
+  });
+
+  const [form, setForm] = useState({
+    fullname: "",
+    email: "",
+    password: "",
+  });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setResponse({ isLoading: true, isError: false });
+    try {
+      await registerUser(form);
+      setResponse({ isLoading: false, isError: false });
+    } catch (error) {
+      setResponse({ isLoading: false, isError: true });
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      if(response.error) {<p>Something went wrong</p>}
+      <input
+        type="text"
+        placeholder="Fullname"
+        value={form.fullname}
+        onChange={(e) => setForm({ ...form, fullname: e.target.value })}
+      />
+      <input
+        type="email"
+        placeholder="Email"
+        value={form.email}
+        onChange={(e) => setForm({ ...form, email: e.target.value })}
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        value={form.password}
+        onChange={(e) => setForm({ ...form, password: e.target.value })}
+      />
+      <button type="submit">Register</button>
+    </form>
+  );
+}
+```
+
+### loginUser
+
+```javascript filename="Example loginUser"
+import { useAuth } from "react";
+
+export default function Example() {
+  const { loginUser, isLoading } = useAuth();
+
+  const [response, setResponse] = useState({
+    isLoading: false,
+    isError: false,
+  });
+
+  const [form, setForm] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setResponse({ isLoading: true, isError: false });
+    try {
+      await loginUser(form);
+      setResponse({ isLoading: false, isError: false });
+    } catch (error) {
+      setResponse({ isLoading: false, isError: true });
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      if(response.error) {<p>Something went wrong</p>}
+      <input
+        type="email"
+        placeholder="Email"
+        value={form.email}
+        onChange={(e) => setForm({ ...form, email: e.target.value })}
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        value={form.password}
+        onChange={(e) => setForm({ ...form, password: e.target.value })}
+      />
+      <button type="submit">Login</button>
+    </form>
+  );
+}
+```
+
+### logoutUser
+
+```javascript filename="Example logoutUser"
+import { useAuth } from "react";
+
+export default function Example() {
+  const { logoutUser, isLoading, user } = useAuth();
+
+  const handleLogout = async () => {
+    await logoutUser();
+  };
+
+  if (isLoading) {
+    return <>Loading...</>;
+  }
+
+  return (
+    <>
+      <h1>{user.name}</h1>
+      <p>{user.email}</p>
+      <button onClick={handleLogout}>Logout</button>
+    </>
+  );
+}
+```

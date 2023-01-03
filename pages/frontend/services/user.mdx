@@ -1,0 +1,95 @@
+## User Service
+
+User service adalah
+
+## Scope
+
+- AuthContext
+
+## Usage
+
+```js
+import userService from "@services/user.service";
+
+// must in async function
+const response = await userService.register();
+const response = await userService.login();
+const response = await userService.me();
+```
+
+### Register
+
+```js
+import userService from "@services/user.service";
+
+const [response, setResponse] = useState({
+  isLoading: false,
+  isError: false,
+});
+
+const [form, setForm] = useState({
+  email: "",
+  password: "",
+  name: "",
+});
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setResponse({ isLoading: true, isError: false });
+  try {
+    const response = await userService.register(form);
+    setResponse({ isLoading: false, isError: false });
+  } catch (error) {
+    setResponse({ isLoading: false, isError: true });
+  }
+};
+```
+
+### Login
+
+```js
+import userService from "@services/user.service";
+
+const [response, setResponse] = useState({
+  isLoading: false,
+  isError: false,
+});
+
+const [form, setForm] = useState({
+  email: "",
+  password: "",
+});
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setResponse({ isLoading: true, isError: false });
+  try {
+    const response = await userService.login(form);
+    setResponse({ isLoading: false, isError: false });
+  } catch (error) {
+    setResponse({ isLoading: false, isError: true });
+  }
+};
+```
+
+### Me
+
+```js
+import userService from "@services/user.service";
+
+const [response, setResponse] = useState({
+  isLoading: false,
+  isError: false,
+  data: null,
+});
+
+const getCurrentUser = async () => {
+  setResponse({ isLoading: true, isError: false, data: null });
+  try {
+    const response = await userService.me();
+    setResponse({ isLoading: false, isError: false, data: response.data });
+  } catch (error) {
+    setResponse({ isLoading: false, isError: true, data: null });
+  }
+};
+```
