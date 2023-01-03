@@ -5,7 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint",
+    "lint:strict": "eslint --max-warnings=0 ./",
+    "lint:fix": "eslint ./ --fix && prettier -w .",
+    "format": "prettier -w .",
+    "format:check": "prettier -c ."
   },
   "repository": {
     "type": "git",

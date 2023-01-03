@@ -1,0 +1,7 @@
+{
+  "mockapi": "Mock API",
+  "routing": "Routing",
+  "controller": "Controller",
+  "middleware": "Middleware",
+  "model": "Model"
+}

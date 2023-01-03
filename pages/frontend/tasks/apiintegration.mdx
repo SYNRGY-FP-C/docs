@@ -1,0 +1,28 @@
+## API Integration
+
+API Integration adalah proses menghubungkan aplikasi dengan API yang telah disediakan. API Integration biasanya digunakan untuk mengambil data dari aplikasi server dan mengirim data ke aplikasi server. API Integration juga dapat digunakan untuk mengirim data ke aplikasi lain dan mengambil data dari aplikasi lain.
+
+Proses API Integration sudah dicontohkan pada halaman sebelumnya. Pada halaman tersebut, kita telah mengambil data dari API, memasukan ke dalam state dan menampilkannya pada halaman.
+
+### Example
+
+```js
+import { useState, useEffect } from "react";
+
+export default function ExamplePage() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/todos/1")
+      .then((response) => response.json())
+      .then((json) => setData(json));
+  }, []);
+
+  return (
+    <div>
+      <h1>Example Page</h1>
+      <p>{JSON.stringify(data)}</p>
+    </div>
+  );
+}
+```

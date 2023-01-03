@@ -1,0 +1,156 @@
+## Form Handling
+
+Form handling menggunakan react useState untuk mengatur state dari form.
+
+### Example 1
+
+```javascript filename="Example 1"
+import React, { useState } from "react";
+
+export default function ExamplePage() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(form);
+  };
+
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        name="name"
+        value={form.name}
+        onChange={handleChange}
+      />
+      <input
+        type="email"
+        name="email"
+        value={form.email}
+        onChange={handleChange}
+      />
+      <input
+        type="password"
+        name="password"
+        value={form.password}
+        onChange={handleChange}
+      />
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+```
+
+### Example 2
+
+```javascript filename="Example 2"
+import React, { useState } from "react";
+
+export default function ExamplePage() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log({
+      name,
+      email,
+      password,
+    });
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        name="name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <input
+        type="email"
+        name="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <input
+        type="password"
+        name="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+```
+
+### Example 3
+
+```javascript filename="Example 3"
+import React, { useState } from "react";
+
+export default function ExamplePage() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(form);
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        name="name"
+        value={form.name}
+        onChange={(e) =>
+          setForm({
+            ...form,
+            name: e.target.value,
+          })
+        }
+      />
+      <input
+        type="email"
+        name="email"
+        value={form.email}
+        onChange={(e) =>
+          setForm({
+            ...form,
+            email: e.target.value,
+          })
+        }
+      />
+      <input
+        type="password"
+        name="password"
+        value={form.password}
+        onChange={(e) =>
+          setForm({
+            ...form,
+            password: e.target.value,
+          })
+        }
+      />
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+```

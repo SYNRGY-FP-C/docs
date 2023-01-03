@@ -1,5 +1,4 @@
 {
-  "controller": "Controller",
-  "middleware": "Middleware",
-  "model": "Model"
+  "tasks": "Tasks",
+  "utils": "Utils"
 }

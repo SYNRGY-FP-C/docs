@@ -7,11 +7,13 @@ git clone -b <branchname> <remote-repo-url>
 ```
 
 ```bash filename="Example Using SSH"
-git clone -b development git@github.com:SYNRGY-FP-C/docs.git
+git clone -b development git@github.com:SYNRGY-FP-C/frontend-final-project.git
+git clone -b development git@github.com:SYNRGY-FP-C/backend-final-project.git
 ```
 
 ```bash filename="Example Using HTTPS"
-git clone -b development https://github.com/SYNRGY-FP-C/docs.git
+git clone -b development https://github.com/SYNRGY-FP-C/frontend-final-project.git
+git clone -b development https://github.com/SYNRGY-FP-C/backend-final-project.git
 ```
 
 ### 2. Checkout branch feature/namafitur-step
@@ -24,7 +26,9 @@ git checkout -b feature/namafitur-step
 git checkout -b feature/login-slicing
 ```
 
-### 3. Pull dari branch development
+### 3. Ngoding
+
+### 4. Pull dari branch development
 
 ```bash
 git pull origin <parrent-branch>
@@ -34,7 +38,7 @@ git pull origin <parrent-branch>
 git pull origin development
 ```
 
-### 4. Add, Commit dan Push ke branch feature/namafitur-step
+### 5. Add, Commit dan Push ke branch feature/namafitur-step
 
 ```bash
 git add .
@@ -54,4 +58,8 @@ git commit -m "slicing login page"
 git push origin feature/login-slicing
 ```
 
-### 5. Pull Request ke branch development di github
+### 6. Pull Request ke branch development di github
+
+### 7. Tunggu review dari team
+
+Kembali ke branch `development` ketika menambah fitur baru dan lakukan step 2-7

@@ -21,6 +21,34 @@ const createExample = async (req, res, next) => {
   }
 };
 
+const getAllExample = async (req, res, next) => {
+  try {
+    res.status(200).json({
+      code: 200,
+      message: "All example retrieved successfully",
+      data: [
+        {
+          id: 1,
+          name: "Example 1",
+          description: "Example 1 description",
+        },
+        {
+          id: 2,
+          name: "Example 2",
+          description: "Example 2 description",
+        },
+        {
+          id: 3,
+          name: "Example 3",
+          description: "Example 3 description",
+        },
+      ],
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
 const getExample = async (req, res, next) => {
   try {
     const { id } = req.params;
@@ -67,5 +95,12 @@ const deleteExample = async (req, res, next) => {
   } catch (error) {
     next(error);
   }
+};
+
+module.exports = {
+  createExample,
+  getExample,
+  updateExample,
+  deleteExample,
 };
 ```

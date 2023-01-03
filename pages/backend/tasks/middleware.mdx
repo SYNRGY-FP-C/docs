@@ -1,0 +1,32 @@
+## Middleware
+
+Middleware berfungsi untuk memproses request sebelum request tersebut dijalankan oleh controller. Middleware dapat digunakan untuk melakukan validasi, autentikasi, dan lain-lain.
+
+### Example
+
+```js
+const express = require("express");
+
+const app = express();
+
+// pengecekan dengan middleware pertama
+app.use((req, res, next) => {
+  console.log("Middleware 1");
+  next();
+});
+
+// pengecekan dengan middleware kedua
+app.use((req, res, next) => {
+  console.log("Middleware 2");
+  next();
+});
+
+// masuk ke controller / handler
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
+
+app.listen(3000, () => {
+  console.log("Server started on port 3000");
+});
+```

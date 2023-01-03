@@ -1,0 +1,21 @@
+## Routing
+
+Routing adalah proses untuk mengarahkan permintaan ke controller yang sesuai. Routing dapat dilakukan dengan menggunakan konfigurasi pada file `app/router/api/nama-route.js` atau dengan menggunakan resource controller.
+
+### Usage
+
+```javascript filename="app/router/api/example.js"
+const express = require("express");
+
+const router = express.Router();
+
+const exampleController = require("../../controllers/example.controller");
+
+router.post("/example", exampleController.createExample);
+router.get("/example", exampleController.getAllExample);
+router.get("/example/:id", exampleController.getExample);
+router.update("/example/:id", exampleController.updateExample);
+router.delete("/example", exampleController.deleteExample);
+
+module.exports = router;
+```

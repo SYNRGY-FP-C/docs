@@ -1,0 +1,19 @@
+## JWT
+
+JWT adalah
+
+### Example
+
+```js
+const { generateToken, verifyToken } = require("@utils/jwt");
+
+const user = {
+  id: 1,
+  name: "John Doe",
+  email: "email@email.com",
+};
+
+const token = generateToken(user);
+
+const decoded = verifyToken(token);
+```

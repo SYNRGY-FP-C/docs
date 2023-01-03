@@ -19,6 +19,9 @@ const config: DocsThemeConfig = {
       titleTemplate: "%s – Synrgy FP Team C",
     };
   },
+  sidebar: {
+    defaultMenuCollapseLevel: 0,
+  },
 };
 
 export default config;

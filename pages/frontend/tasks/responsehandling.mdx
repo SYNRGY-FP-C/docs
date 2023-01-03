@@ -1,0 +1,218 @@
+## Response Handling
+
+Response handling menggunakan react useState dan useEffect. Untuk konsumsi API menggunakan axios. Untuk menghandle error menggunakan try catch. Untuk menghandle loading, saya menggunakan useState.
+
+### Example 1
+
+```javascript
+import React, { useState, useEffect } from "react";
+import exampleService from "../services/exampleService";
+
+export default function ExamplePage() {
+  const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsError(false);
+      setIsLoading(true);
+
+      try {
+        const result = await exampleService.getExample();
+        setData(result.data);
+      } catch (error) {
+        setIsError(error);
+      }
+
+      setIsLoading(false);
+    };
+
+    fetchData();
+  }, []);
+
+  return (
+    <div>
+      {isError && <div>Something went wrong ...</div>}
+
+      {isLoading ? (
+        <div>Loading ...</div>
+      ) : (
+        <ul>
+          {data.map((item) => (
+            <li key={item.id}>
+              <span>{item.name}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+```
+
+### Example 2
+
+```javascript
+import React, { useState, useEffect } from "react";
+import exampleService from "../services/exampleService";
+
+export default function ExamplePage() {
+  const [response, setResponse] = useState({
+    data: [],
+    isLoading: false,
+    isError: false,
+  });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setResponse({
+        data: [],
+        isLoading: true,
+        isError: false,
+      });
+
+      try {
+        const result = await exampleService.getExample();
+        setResponse({
+          data: result.data,
+          isLoading: false,
+          isError: false,
+        });
+      } catch (error) {
+        setResponse({
+          data: [],
+          isLoading: false,
+          isError: error,
+        });
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  return (
+    <div>
+      {response.isError && <div>Something went wrong ...</div>}
+
+      {response.isLoading ? (
+        <div>Loading ...</div>
+      ) : (
+        <ul>
+          {response.data.map((item) => (
+            <li key={item.id}>
+              <span>{item.name}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+```
+
+### Example 3 with Form Handling
+
+```javascript
+import React, { useState, useEffect } from "react";
+import exampleService from "../services/exampleService";
+
+export default function ExamplePage() {
+  const [response, setResponse] = useState({
+    data: [],
+    isLoading: false,
+    isError: false,
+  });
+
+  const [form, setForm] = useState({
+    name: "",
+  });
+
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setResponse({
+      data: [],
+      isLoading: true,
+      isError: false,
+    });
+
+    try {
+      const result = await exampleService.postExample(form);
+      setResponse({
+        data: result.data,
+        isLoading: false,
+        isError: false,
+      });
+    } catch (error) {
+      setResponse({
+        data: [],
+        isLoading: false,
+        isError: error,
+      });
+    }
+  };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setResponse({
+        data: [],
+        isLoading: true,
+        isError: false,
+      });
+
+      try {
+        const result = await exampleService.getExample();
+        setResponse({
+          data: result.data,
+          isLoading: false,
+          isError: false,
+        });
+      } catch (error) {
+        setResponse({
+          data: [],
+          isLoading: false,
+          isError: error,
+        });
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  return (
+    <div>
+      {response.isError && <div>Something went wrong ...</div>}
+
+      {response.isLoading ? (
+        <div>Loading ...</div>
+      ) : (
+        <ul>
+          {response.data.map((item) => (
+            <li key={item.id}>
+              <span>{item.name}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="name"
+          value={form.name}
+          onChange={handleChange}
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  );
+}
+```
