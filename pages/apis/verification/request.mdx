@@ -1,0 +1,33 @@
+import Badge from "@components/built-in/Badge";
+
+## Request Verification
+
+This endpoint is used to request verification code to user `email` or phone number via `whatsapp`.
+User who already verified their account will get error response.
+
+**Request :**
+
+- Method : <Badge method="POST">POST</Badge>
+- Endpoint : `/api/verify/request`
+- Headers :
+  - `Content-Type: application/json`
+  - `Accept: application/json`
+
+**Body :**
+
+```json
+{
+  "email": "string",
+  "type": "string|enum"
+}
+```
+
+**Response :** <Badge outline variant="success">200 OK</Badge>
+
+```json
+{
+  "code": "number",
+  "status": "string",
+  "message": "string"
+}
+```

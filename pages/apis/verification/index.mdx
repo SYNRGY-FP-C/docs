@@ -1,0 +1,17 @@
+import Badge from "@components/built-in/Badge";
+
+## Verification
+
+User who already verified their account will get error response.
+
+**Request :**
+
+- Method : <Badge method="GET">GET</Badge>
+- Endpoint : `/api/verify?email=:email&code=:code`
+
+**Query Parameters :**
+
+- `email` => Email address of the user
+- `code` => Verification code
+
+**Response :** <Badge outline variant="success">200 OK</Badge>
