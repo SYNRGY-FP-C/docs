@@ -1,0 +1,34 @@
+## Detail Room Page
+
+### Description
+
+This page is used to show detail of a room and allow user to book it.
+
+- Title => `Room's Title`
+- URL => `/rooms/:roomId`
+- Path => `src/pages/rooms/:roomId.jsx`
+
+### Authorization / Access
+
+- Everyone can access this page or just user (tenant / renter)?
+
+### APIs / Services / Contexts
+
+- Get all rooms => `GET /api/rooms/:roomId` using `roomService`
+- Get all reviews of a room => `GET /api/rooms/:roomId/reviews` using `reviewService`?
+- Post a review => `POST /api/rooms/:roomId/reviews` using `reviewService`?
+- Book a room => `POST /api/bookings` using `bookingService`?
+
+### Page Elements / Components / Layouts
+
+- Navbar (using DefaultLayout)
+- Room Detail Layout
+- Form
+
+  - `date` => `Date Picker`?
+  - `payment_scheme` => `Radio Button`?
+  - `guests` => `Number Picker`?
+  - `duration` => `Number Picker`?
+  - Button => `Book Now`
+
+- Footer (using DefaultLayout)

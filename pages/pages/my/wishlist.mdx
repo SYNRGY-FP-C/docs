@@ -1,0 +1,30 @@
+## My Wishlist Page
+
+### Description
+
+This page is used to
+
+- Title => `My Wishlist`
+- URL => `/my/wishlist`
+- Path => `src/pages/my/wishlist.jsx`
+
+### Authorization / Access
+
+- Only user (tenant / renter) can access this page
+- User (tenant / renter) must be logged in to access this page
+- If user (tenant / renter) is not logged in, redirect to login page `/login`
+
+### APIs / Services / Contexts
+
+- Is user logged in => `isAuthenticated` using `AuthContext`
+- Get user (tenant / renter) wishlist => `GET /api/users/wishlist` using `userService`?
+- Get user (tenant / renter) wishlist from `localstorage` => `getWishlist` using `utils/helpers`?
+
+### Page Elements / Components / Layouts
+
+- Sidebar (using ProfileLayout)?
+- Navbar (using DefaultLayout)?
+- List
+  - Room Card?
+- Pagination?
+- Footer (using DefaultLayout)?

@@ -1,0 +1,33 @@
+## Compare Page
+
+### Description
+
+This page is used to compare rooms in wishlist.
+
+- Title => `Compare your wishlist`
+- URL => `/compare`
+- Path => `src/pages/compare.jsx`
+
+### Authorization / Access
+
+- Everyone can access this page or just user (tenant / renter)?
+
+### APIs / Services / Contexts
+
+- Get user (tenant / renter) wishlist => `GET /api/users/wishlist` using `userService`?
+- Get user (tenant / renter) wishlist from `localstorage` => `getWishlist` using `utils/helpers`?
+- If user (tenant / renter) is not logged in or does not have wishlist in `localstorage` then show empty info?
+
+### Page Elements / Components / Layouts
+
+- Navbar (using DefaultLayout)
+- List
+  - Room Card
+- Table
+  - `price`
+  - `rating`
+  - `promo`
+  - `facilities`
+  - `type`
+  - `payment_scheme`
+- Footer (using DefaultLayout)

@@ -1,0 +1,28 @@
+## Admin All Transactions Page
+
+### Description
+
+This page is used to display all Transactions.
+
+- Title => `Dashboard - Transactions`
+- URL => `/dashboard/transactions`
+- Path => `src/pages/dashboard/transactions.jsx`
+
+### Authorization / Access
+
+- Only user (superadmin) can access this page
+- User (superadmin) must be logged in to access this page
+- If user (superadmin) is not logged in, redirect to login page `/login`
+
+### APIs / Services / Contexts
+
+- Is user logged in => `isAuthenticated`, `isSuperadmin` using `AuthContext`
+- Get current profile => `user` using `AuthContext`
+- Get all owned rooms => `GET /api/transactions` using `transactionService`
+
+### Page Elements / Components / Layouts
+
+- Sidebar (using DashboardLayout)
+- List
+  - TransacationCard?
+- Pagination?

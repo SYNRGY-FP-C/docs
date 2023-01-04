@@ -1,0 +1,28 @@
+## Register Page
+
+### Description
+
+This page is used to register a new user.
+
+- Title => `Create an account`
+- URL => `/register`
+- Path => `src/pages/register.jsx`
+
+### Authorization / Access
+
+- Everyone can access this page
+- If user is already logged in, redirect to `/`
+
+### APIs / Services / Contexts
+
+- Logout user => `registerUser` or `POST /api/users/register` using `AuthContext`
+
+### Page Elements / Components / Layouts
+
+- Navbar (using DefaultLayout)
+- Input Form
+  - `fullname`
+  - `email`
+  - `password`
+  - Button => `Create an account`
+- Footer (using DefaultLayout)

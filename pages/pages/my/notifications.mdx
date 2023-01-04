@@ -1,0 +1,27 @@
+## My Notification Page
+
+### Description
+
+This page is used to display user (tenant / renter) notification.
+
+- Title => `My Notification`
+- URL => `/my/notifications`
+- Path => `src/pages/my/notifications.jsx`
+
+### Authorization / Access
+
+- Only user (tenant / renter) can access this page
+- User (tenant / renter) must be logged in to access this page
+- If user (tenant / renter) is not logged in, redirect to login page `/login`
+
+### APIs / Services / Contexts
+
+- Is user logged in => `isAuthenticated` using `AuthContext`
+- Get user (tenant / renter) notification => `GET /api/notifications` using `notificationService`
+
+### Page Elements / Components / Layouts
+
+- Sidebar (using ProfileLayout)?
+- List?
+  - Notification Card?
+- Pagination?

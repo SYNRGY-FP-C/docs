@@ -1,0 +1,25 @@
+## My Settings Page
+
+### Description
+
+It contains a button to logout.
+
+- Title => `My Settings`
+- URL => `/my/settings`
+- Path => `src/pages/my/settings.jsx`
+
+### Authorization / Access
+
+- Only user (tenant / renter) can access this page
+- User (tenant / renter) must be logged in to access this page
+- If user (tenant / renter) is not logged in, redirect to login page `/login`
+
+### APIs / Services / Contexts
+
+- Is user logged in => `isAuthenticated` using `AuthContext`
+- Logout user => `logoutUser` using `AuthContext`
+
+### Page Elements / Components / Layouts
+
+- Sidebar (using AdminLayout)
+- Logout Button (onClick => logoutUser)

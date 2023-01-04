@@ -1,0 +1,32 @@
+## Superadmin Profile Page
+
+### Description
+
+This page is used to show superadmin's profile and edit superadmin's profile
+
+- Title => `Dashboard - Profile`
+- URL => `/dashboard`
+- Path => `src/pages/dashboard/index.jsx`
+
+### Authorization / Access
+
+- Only user (superadmin) can access this page
+- User (superadmin) must be logged in to access this page
+- User (superadmin) can only access his/her own profile
+- User (superadmin) can only edit his/her own profile
+- If user (superadmin) is not logged in, redirect to login page `/login`
+
+### APIs / Services / Contexts
+
+- Is user logged in => `isAuthenticated`, `isSuperadmin` using `AuthContext`
+- Get current profile => `user` using `AuthContext`
+
+### Page Elements / Components / Layouts
+
+- Sidebar (using DashboardLayout)
+- Input Form
+  - `fullname`
+  - `avatar`
+  - `birthdate`
+  - `gender`
+  - `occupation`

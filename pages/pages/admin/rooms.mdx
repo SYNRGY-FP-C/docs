@@ -1,0 +1,29 @@
+## Admin Owned Roooms Page
+
+### Description
+
+This page is used to display all owned rooms by the user (provider / owner) and allow the user to edit the room.
+
+- Title => `Dashboard - Rooms`
+- URL => `/admin/rooms`
+- Path => `src/pages/admin/rooms.jsx`
+
+### Authorization / Access
+
+- Only user (provider / owner) can access this page
+- User (provider / owner) must be logged in to access this page
+- User (provider / owner) can only edit his/her own profile
+- If user (provider / owner) is not logged in, redirect to login page `/login`
+
+### APIs / Services / Contexts
+
+- Is user logged in => `isAuthenticated`, `isAdmin` using `AuthContext`
+- Get current profile => `user` using `AuthContext`
+- Get all owned rooms => `GET /api/users/rooms` using `userService`
+
+### Page Elements / Components / Layouts
+
+- Sidebar (using AdminLayout)
+- List
+  - RoomCard
+- Pagination?

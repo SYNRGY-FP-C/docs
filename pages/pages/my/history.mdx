@@ -1,0 +1,31 @@
+## My History Transactions Page
+
+### Description
+
+This page is used to show user (tenant / renter) history transactions (rental, payment, etc) in a table.
+
+- Title => `My History`
+- URL => `/my/history`
+- Path => `src/pages/my/history.jsx`
+
+### Authorization / Access
+
+- Only user (tenant / renter) can access this page
+- User (tenant / renter) must be logged in to access this page
+- If user (tenant / renter) is not logged in, redirect to login page `/login`
+
+### APIs / Services / Contexts
+
+- Is user logged in => `isAuthenticated` using `AuthContext`
+- Get user (tenant / renter) history transactions => `GET /api/users/transactions` using `transactionService`
+
+### Page Elements / Components / Layouts
+
+- Sidebar (using ProfileLayout)
+- Table
+  - `title`
+  - `status`
+  - `date`
+  - `amount`
+  - Action?
+- Pagination?

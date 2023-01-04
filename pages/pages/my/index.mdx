@@ -1,0 +1,31 @@
+## My Profile Page
+
+### Description
+
+This page is used to show user's profile and edit user's profile
+
+- Title => `My Profile`
+- URL => `/my`
+- Path => `src/pages/my/index.jsx`
+
+### Authorization / Access
+
+- Only user (tenant / renter) can access this page
+- User (tenant / renter) must be logged in to access this page
+- User (tenant / renter) can only edit his/her own profile
+- If user (tenant / renter) is not logged in, redirect to login page `/login`
+
+### APIs / Services / Contexts
+
+- Is user logged in => `isAuthenticated` using `AuthContext`
+- Get current profile => `user` using `AuthContext`
+
+### Page Elements / Components / Layouts
+
+- Sidebar (using ProfileLayout)
+- Input Form
+  - `fullname`
+  - `avatar`
+  - `birthdate`
+  - `gender`
+  - `occupation`

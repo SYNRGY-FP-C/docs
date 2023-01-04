@@ -1,0 +1,27 @@
+## Login Page
+
+### Description
+
+This page is used to login user.
+
+- Title => `Log in to your account`
+- URL => `/login`
+- Path => `src/pages/login.jsx`
+
+### Authorization / Access
+
+- Everyone can access this page
+- If user is already logged in, redirect to `/`
+
+### APIs / Services / Contexts
+
+- Logout user => `loginUser`or `POST /api/users/login` using `AuthContext`
+
+### Page Elements / Components / Layouts
+
+- Navbar (using DefaultLayout)
+- Input Form
+  - `email` / `phone_number`
+  - `password`
+  - Button => `Log in`
+- Footer (using DefaultLayout)
