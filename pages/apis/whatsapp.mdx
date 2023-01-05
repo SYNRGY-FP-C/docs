@@ -1,0 +1,32 @@
+import Badge from "@components/built-in/Badge";
+
+## Whatsapp Service
+
+This endpoint is used to send message to user `phone_number` via `whatsapp`.
+
+**Request :**
+
+- Method : <Badge method="POST">POST</Badge>
+- Endpoint : `/api/messages`
+- Headers :
+  - `Authorization: Bearer <token>` [See .env](https://github.com/SYNRGY-FP-C/dotenv/blob/main/fsw/backend/.env)
+  - `Content-Type: application/json`
+  - `Accept: application/json`
+
+**Body :**
+
+```json
+{
+  "phone_number": "string",
+  "message": "string"
+}
+```
+
+**Response :** <Badge outline variant="success">200 OK</Badge>
+
+```json
+{
+  "code": "number",
+  "message": "string"
+}
+```
