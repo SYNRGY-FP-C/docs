@@ -1,10 +1,10 @@
-## My Profile Page
+## Profil Saya Page
 
 ### Description
 
 This page is used to show user's profile and edit user's profile
 
-- Title => `My Profile`
+- Title => `Profil Saya`
 - URL => `/my`
 - Path => `src/pages/my/index.jsx`
 
@@ -20,12 +20,26 @@ This page is used to show user's profile and edit user's profile
 - Is user logged in => `isAuthenticated` using `AuthContext`
 - Get current profile => `user` using `AuthContext`
 
-### Page Elements / Components / Layouts
+### Forms
 
-- Sidebar (using ProfileLayout)
-- Input Form
-  - `fullname`
+- Form Image
   - `avatar`
+  - Button => `Unggah`
+  - Button => `Hapus`
+- Form Profile
+  - `fullname`
   - `birthdate`
+  - `email`
+  - `phone_number`
   - `gender`
   - `occupation`
+  - `ktp`
+  - Button => `Simpan`
+  - Button => `Reset`
+
+### Page Elements / Components / Layouts
+
+- Navbar (using DefaultLayout)
+- Form Image
+- Form Profile
+- Footer (using DefaultLayout)

@@ -1,0 +1,32 @@
+## Login Pencari Page
+
+### Description
+
+This page is used to login user.
+
+- Title => `Masuk - Pencari`
+- URL => `/login/pencari`
+- Path => `src/pages/login/pencari.jsx`
+
+### Authorization / Access
+
+- Everyone can access this page
+- If user is already logged in, redirect to `/`
+
+### APIs / Services / Contexts
+
+- Login user => `loginUser`or `POST /api/users/login/pencari` using `AuthContext`
+
+### Forms
+
+- Login Form
+  - `email` / `phone_number` / `user_id`
+  - `password`
+  - Button => `Masuk`
+
+### Page Elements / Components / Layouts
+
+- Navbar (using DefaultLayout)
+- Login Form
+- Image
+- Footer (using DefaultLayout)

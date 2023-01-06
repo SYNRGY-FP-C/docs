@@ -1,0 +1,34 @@
+## Register Penyedia Page
+
+### Description
+
+This page is used to register a new user.
+
+- Title => `Buat akun - Penyedia`
+- URL => `/register/penyedia`
+- Path => `src/pages/register/penyedia.jsx`
+
+### Authorization / Access
+
+- Everyone can access this page
+- If user is already logged in, redirect to `/`
+
+### APIs / Services / Contexts
+
+- Register user => `registerUser` or `POST /api/users/register/penyedia` using `AuthContext`
+
+### Forms
+
+- Register Form
+  - `fullname`
+  - `phone_number`
+  - `email`
+  - `password`
+  - Button => `Daftar`
+
+### Page Elements / Components / Layouts
+
+- Navbar (using DefaultLayout)
+- Input Form
+- Image
+- Footer (using DefaultLayout)

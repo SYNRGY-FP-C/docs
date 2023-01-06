@@ -4,9 +4,9 @@
 
 This page is used to search rooms.
 
-- Title => `Search rooms`
+- Title => `Cari Kost`
 - URL => `/search`
-- Path => `src/pages/search/rooms/index.jsx` or `src/pages/rooms.jsx` or `src/pages/search.jsx`
+- Path => `src/pages/search.jsx`
 
 ### Authorization / Access
 
@@ -17,16 +17,23 @@ This page is used to search rooms.
 - Get all rooms => `GET /api/rooms` using `roomService`
 - Get all rooms by category => `GET /api/rooms/categories` using `roomService`
 
-### Page Elements / Components / Layouts
+### Forms
 
-- Navbar (using DefaultLayout)
-- Form
+- Form Filter
+  - `type`
   - `price`
   - `rating`
   - `promo`
   - `facilities`
-  - `type`
   - `payment_scheme`
+- SearchBar
+  - `search`
+
+### Page Elements / Components / Layouts
+
+- Navbar (using DefaultLayout)
+- Form Filter
+- SearchBar
 - List
   - Room Card?
 - Footer (using DefaultLayout)

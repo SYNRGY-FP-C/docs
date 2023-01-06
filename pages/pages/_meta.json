@@ -1,9 +1,8 @@
 {
   "index": "Home",
-  "search": "Search",
-  "categories": "Categories",
-  "compare": "Compare",
   "register": "Register",
   "login": "Login",
-  "my": "My Profile"
+  "search": "Cari Kost",
+  "details": "Detail Kost",
+  "my": "Profil Saya"
 }

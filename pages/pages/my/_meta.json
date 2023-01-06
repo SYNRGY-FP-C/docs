@@ -1,7 +1,7 @@
 {
-  "index": "My Profile",
-  "wishlist": "My Wishlist",
-  "notifications": "My Notification",
-  "history": "My History",
-  "settings": "Settings"
+  "index": "Profil Saya",
+  "history": "Riwayat Transaksi",
+  "wishlist": "Wishlist",
+  "notifications": "Notifikasi",
+  "settings": "Pengaturan"
 }

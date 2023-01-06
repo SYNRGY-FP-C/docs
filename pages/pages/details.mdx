@@ -5,8 +5,8 @@
 This page is used to show detail of a room and allow user to book it.
 
 - Title => `Room's Title`
-- URL => `/rooms/:roomId`
-- Path => `src/pages/rooms/:roomId.jsx`
+- URL => `/details/:roomId`
+- Path => `src/pages/details/:roomId.jsx`
 
 ### Authorization / Access
 
@@ -19,16 +19,19 @@ This page is used to show detail of a room and allow user to book it.
 - Post a review => `POST /api/rooms/:roomId/reviews` using `reviewService`?
 - Book a room => `POST /api/bookings` using `bookingService`?
 
-### Page Elements / Components / Layouts
+### Forms
 
-- Navbar (using DefaultLayout)
-- Room Detail Layout
-- Form
-
+- Form Checkout
   - `date` => `Date Picker`?
   - `payment_scheme` => `Radio Button`?
   - `guests` => `Number Picker`?
   - `duration` => `Number Picker`?
   - Button => `Book Now`
 
+### Page Elements / Components / Layouts
+
+- Navbar (using DefaultLayout)
+- Room Detail Layout
+- MapCard
+- Form Checkout (Card Fixed Position)
 - Footer (using DefaultLayout)
