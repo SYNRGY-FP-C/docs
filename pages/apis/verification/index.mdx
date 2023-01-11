@@ -6,12 +6,17 @@ User who already verified their account will get error response.
 
 **Request :**
 
-- Method : <Badge method="GET">GET</Badge>
-- Endpoint : `/api/verify?email=:email&code=:code`
+- Method : <Badge method="POST">POST</Badge>
+- Endpoint : `/api/verify`
 
-**Query Parameters :**
+**Body :**
 
-- `email` => Email address of the user
-- `code` => Verification code
+```json
+{
+  "email?": "string",
+  "phone_number?": "string",
+  "code": "string"
+}
+```
 
 **Response :** <Badge outline variant="success">200 OK</Badge>

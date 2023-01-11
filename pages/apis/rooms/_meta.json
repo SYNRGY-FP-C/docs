@@ -1,7 +1,0 @@
-{
-  "create": "Create a new Room",
-  "getall": "Get all Rooms",
-  "getbyid": "Get by ID",
-  "update": "Update a Room",
-  "delete": "Delete a Room"
-}
