@@ -4,5 +4,6 @@
   "frontend": "Frontend",
   "backend": "Backend",
   "pages": "Pages",
-  "apis": "API"
+  "apis": "API",
+  "contract": "Contract"
 }

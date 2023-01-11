@@ -1,0 +1,40 @@
+import Badge from "@components/built-in/Badge";
+
+## User Registration `MVP`
+
+**Request :**
+
+- Method : <Badge method="POST">POST</Badge>
+- Endpoint : `/api/users/register` or else
+- Headers :
+  - `Content-Type: application/json`
+  - `Accept: application/json`
+
+**Body :**
+
+```json
+{
+  "email": "string",
+  "phone_number": "string",
+  "password": "string"
+}
+```
+
+or
+
+```json
+{
+  "email": "string",
+  "phone_number": "string",
+  "password": "string",
+  "confirm_password": "string"
+}
+```
+
+**Response :** <Badge outline variant="success">201 Created</Badge>
+
+```json
+{
+  "accessToken": "string, jwt"
+}
+```

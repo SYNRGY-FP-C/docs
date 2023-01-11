@@ -1,0 +1,28 @@
+import Badge from "@components/built-in/Badge";
+
+## User Login `MVP`
+
+**Request :**
+
+- Method : <Badge method="POST">POST</Badge>
+- Endpoint : `/api/users/login` or else
+- Headers :
+  - `Content-Type: application/json`
+  - `Accept: application/json`
+
+**Body :**
+
+```json
+{
+  "email": "string",
+  "password": "string"
+}
+```
+
+**Response :** <Badge outline variant="success">200 OK</Badge>
+
+```json
+{
+  "accessToken": "string, jwt"
+}
+```
