@@ -10,13 +10,15 @@ Response : <Badge outline variant="danger">404 Not Found</Badge>
 
 Response : <Badge outline variant="danger">422 Unprocessable Entity</Badge>
 
+`errors` field is optional
+
 ```json
 {
   "status": "string",
   "message": "string",
   "errors?": [
     {
-      "field": "string"
+      "field": "string",
       "message": "string"
     }
   ]
