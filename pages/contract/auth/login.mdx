@@ -5,6 +5,7 @@ import Badge from "@components/built-in/Badge";
 **Request :**
 
 - Method : <Badge method="POST">POST</Badge>
+- URL : `https://be-java-binar-fp-staging.up.railway.app`
 - Endpoint : `/v1/auth/login`
 - Headers :
   - `Content-Type: application/json`
@@ -31,7 +32,7 @@ import Badge from "@components/built-in/Badge";
       "id": "number",
       "fullname": "string",
       "email": "string",
-      "phone_number": "string",
+      "phone": "string",
       "birthdate": "string",
       "gender": "string",
       "occupation": "string",
@@ -39,7 +40,7 @@ import Badge from "@components/built-in/Badge";
         "id": "number",
         "name": "string"
       },
-      "isVerified": "boolean"
+      "verified": "boolean"
     }
   }
 }

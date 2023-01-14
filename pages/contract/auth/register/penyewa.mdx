@@ -5,6 +5,7 @@ import Badge from "@components/built-in/Badge";
 **Request :**
 
 - Method : <Badge method="POST">POST</Badge>
+- URL : `https://be-java-binar-fp-staging.up.railway.app`
 - Endpoint : `/v1/auth/penyewa/register`
 - Headers :
   - `Content-Type: application/json`
@@ -27,7 +28,7 @@ import Badge from "@components/built-in/Badge";
   "status": "string",
   "message": "string",
   "data": {
-    "accessToken": "string, jwt",
+    "access_token": "string, jwt",
     "user_details": {
       "id": "number",
       "fullname": "string",
@@ -40,7 +41,7 @@ import Badge from "@components/built-in/Badge";
         "id": "number",
         "name": "string"
       },
-      "isVerified": "boolean"
+      "verified": "boolean"
     }
   }
 }
