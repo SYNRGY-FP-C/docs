@@ -1,0 +1,33 @@
+import Badge from "@components/built-in/Badge";
+
+## Change Password
+
+**Request :**
+
+- Method : <Badge method="POST">POST</Badge>
+- Endpoint : `/v1/account/verification`
+- Headers :
+  - `Authorization: Bearer <accessToken>`
+  - `Content-Type: multipart/form-data`
+
+**Body :**
+
+```json
+{
+  "email": "string",
+  "phone": "string",
+  "verification": {
+    "type": "string, enum",
+    "photo": "file"
+  }
+}
+```
+
+**Response :** <Badge outline variant="success">200 OK</Badge>
+
+```json
+{
+  "status": "string",
+  "message": "string"
+}
+```

@@ -1,0 +1,34 @@
+import Badge from "@components/built-in/Badge";
+
+## OTP Request Verification
+
+This endpoint is used to request verification code to user `email` or phone number via `whatsapp`.
+User who already verified their account will get error response.
+
+**Request :**
+
+- Method : <Badge method="POST">POST</Badge>
+- Endpoint : `/v1/verify/request`
+- Headers :
+  - `Content-Type: application/json`
+  - `Accept: application/json`
+
+**Body :**
+
+Bisa menerima `email` atau `phone_number` (harus salah satu)
+
+```json
+{
+  "email?": "string",
+  "phone_number?": "string"
+}
+```
+
+**Response :** <Badge outline variant="success">200 OK</Badge>
+
+```json
+{
+  "status": "success",
+  "message": "Verification code has been sent successfully"
+}
+```

@@ -10,13 +10,15 @@ Response : <Badge outline variant="danger">404 Not Found</Badge>
 
 Response : <Badge outline variant="danger">422 Unprocessable Entity</Badge>
 
-Response : <Badge outline variant="danger">500 Internal Server Error</Badge>
-
 ```json
 {
-  "code": "number",
-  "status": "string, enum",
+  "status": "string",
   "message": "string",
-  "errors": ["string"]
+  "errors?": [
+    {
+      "field": "string"
+      "message": "string"
+    }
+  ]
 }
 ```

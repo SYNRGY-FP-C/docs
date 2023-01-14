@@ -1,4 +1,7 @@
 {
+  "index": "API Contract",
   "auth": "Auth",
+  "otp": "OTP",
+  "account": "Account",
   "errors": "Errors"
 }

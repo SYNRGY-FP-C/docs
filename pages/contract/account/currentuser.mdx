@@ -1,0 +1,37 @@
+import Badge from "@components/built-in/Badge";
+
+## Get Current User
+
+**Request :**
+
+- Method : <Badge method="GET">GET</Badge>
+- Endpoint : `/v1/account/me`
+- Headers :
+  - `Authorization: Bearer <accessToken>`
+  - `Content-Type: application/json`
+  - `Accept: application/json`
+
+**Response :** <Badge outline variant="success">200 OK</Badge>
+
+```json
+{
+  "status": "string",
+  "message": "string",
+  "data": {
+    "id": "number",
+    "fullname": "string",
+    "birthdate": "string",
+    "gender": "string, enum",
+    "occupation": "string",
+    "email": "string, email",
+    "phone_number": "string",
+    "role": "string, enum",
+    "isVerified": "boolean",
+    "photo": "string, url",
+    "verification": {
+      "type": "string, enum",
+      "photo": "file"
+    }
+  }
+}
+```

@@ -1,11 +1,11 @@
 import Badge from "@components/built-in/Badge";
 
-## User Login `MVP`
+## User Registration - Penyedia `MVP`
 
 **Request :**
 
 - Method : <Badge method="POST">POST</Badge>
-- Endpoint : `/v1/auth/login`
+- Endpoint : `/v1/auth/penyedia/register`
 - Headers :
   - `Content-Type: application/json`
   - `Accept: application/json`
@@ -15,23 +15,24 @@ import Badge from "@components/built-in/Badge";
 ```json
 {
   "email": "string",
+  "phone": "string",
   "password": "string"
 }
 ```
 
-**Response :** <Badge outline variant="success">200 OK</Badge>
+**Response :** <Badge outline variant="success">201 Created</Badge>
 
 ```json
 {
   "status": "string",
   "message": "string",
   "data": {
-    "access_token": "string, jwt",
+    "accessToken": "string, jwt",
     "user_details": {
       "id": "number",
       "fullname": "string",
       "email": "string",
-      "phone_number": "string",
+      "phone": "string",
       "birthdate": "string",
       "gender": "string",
       "occupation": "string",

@@ -1,5 +1,4 @@
 {
   "register": "Register",
-  "login": "Login",
-  "currentuser": "Current User"
+  "login": "Login"
 }
