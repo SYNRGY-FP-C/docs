@@ -2,6 +2,8 @@
   "index": "API Contract",
   "auth": "Auth",
   "otp": "OTP",
+  "kost": "Kost",
+  "rooms": "Rooms/Kamar",
   "account": "Account",
   "errors": "Errors"
 }
