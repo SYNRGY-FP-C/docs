@@ -1,22 +1,24 @@
 import Badge from "@components/built-in/Badge";
 
-## Change Password `MVP`
+## Update Bank Account
 
 **Request :**
 
-- Method : <Badge method="POST">POST</Badge>
+- Method : <Badge method="GET">GET</Badge>
 - URL : `https://be-java-binar-fp-staging.up.railway.app`
-- Endpoint : `/v1/account/password`
+- Endpoint : `/v1/account/bank`
 - Headers :
   - `Authorization: Bearer <accessToken>`
   - `Content-Type: application/json`
+  - `Accept: application/json`
 
 **Body :**
 
 ```json
 {
-  "password": "string",
-  "new_password": "string"
+  "bank_name": "string",
+  "account_number": "string",
+  "account_name": "string"
 }
 ```
 

@@ -1,0 +1,90 @@
+import Badge from "@components/built-in/Badge";
+
+## Get Room by ID `MVP`
+
+**Request :**
+
+- Method : <Badge method="GET">GET</Badge>
+- URL : `https://be-java-binar-fp-staging.up.railway.app`
+- Endpoint : `/v1/rooms/:roomId` or else
+- Headers :
+  - `Content-Type: application/json`
+  - `Accept: application/json`
+
+**Response :** <Badge outline variant="success">200 OK</Badge>
+
+```json
+{
+  "status": "string",
+  "message": "string",
+  "data": {
+    "id": "number",
+    "name": "string",
+    "type": "string|enum",
+    "rating": "string",
+    "label": "string",
+    "description": "string",
+    "max_person": "number",
+    "price": "number",
+    "images": {
+      "kost": [
+        {
+          "id": "number",
+          "url": "string"
+        }
+      ],
+      "room": [
+        {
+          "id": "number",
+          "url": "string"
+        }
+      ]
+    },
+    "facilities": [
+      {
+        "id": "number",
+        "name": "string"
+      }
+    ],
+    "payment_scheme": [
+      {
+        "id": "number",
+        "name": "string"
+      }
+    ],
+    "addons_facilities": [
+      {
+        "id": "number",
+        "name": "string",
+        "price": "number"
+      }
+    ],
+    "rules": {
+      "id": "number",
+      "name": "string"
+    },
+    "another_room": [
+      {
+        "id": "number",
+        "name": "string",
+        "price": "number",
+        "thumbnail": "string",
+        "location": {
+          "city": "string",
+          "district": "string"
+        },
+        "rating": "number"
+      }
+    ],
+    "location": {
+      "long": "string",
+      "lat": "string",
+      "address": "string",
+      "province": "string",
+      "city": "string",
+      "district": "string",
+      "note": "string"
+    }
+  }
+}
+```

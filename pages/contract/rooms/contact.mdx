@@ -1,0 +1,26 @@
+import Badge from "@components/built-in/Badge";
+
+## Get Owner Kost by ID `MVP`
+
+**Request :**
+
+- Method : <Badge method="GET">GET</Badge>
+- Endpoint : `/v1/rooms/contact/:roomId` or else
+- Headers :
+  - `Content-Type: application/json`
+  - `Accept: application/json`
+
+**Response :** <Badge outline variant="success">200 OK</Badge>
+
+```json
+{
+  "status": "string",
+  "message": "string",
+  "data": {
+    "id": "number",
+    "name": "string",
+    "phone": "string",
+    "createdAt": "date"
+  }
+}
+```

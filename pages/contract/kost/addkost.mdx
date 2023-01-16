@@ -1,0 +1,57 @@
+import Badge from "@components/built-in/Badge";
+
+## Add new Kost `MVP`
+
+**Request :**
+
+- Method : <Badge method="GET">GET</Badge>
+- URL : `https://be-java-binar-fp-staging.up.railway.app`
+- Endpoint : `/v1/kost/addkost` or else
+- Headers :
+  - `Content-Type: multipart/form-data`
+
+**Body :**
+
+```json
+{
+  "name": "string",
+  "image_1": "file, png|jpg|jpeg",
+  "image_2": "file, png|jpg|jpeg",
+  "type": "string, enum",
+  "description": "string",
+  "location": {
+    "long": "string",
+    "lat": "string",
+    "address": "string",
+    "province": "string",
+    "city": "string",
+    "district": "string",
+    "note": "string"
+  },
+  "payment_scheme": [
+    {
+      "id": "number"
+    }
+  ],
+  "rules": [
+    {
+      "id": "number"
+    }
+  ],
+  "additional_rule": "string",
+  "facilities": [
+    {
+      "id": "number"
+    }
+  ]
+}
+```
+
+**Response :** <Badge outline variant="success">201 Created</Badge>
+
+```json
+{
+  "status": "string",
+  "message": "string"
+}
+```

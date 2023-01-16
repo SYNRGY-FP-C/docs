@@ -1,0 +1,5 @@
+{
+  "all": "Get all kamar",
+  "detail": "Get kamar by ID",
+  "submission": "Pengajuan kamar by ID"
+}

@@ -1,0 +1,67 @@
+import Badge from "@components/built-in/Badge";
+
+## Room Submission `MVP`
+
+**Request :**
+
+- Method : <Badge method="GET">GET</Badge>
+- URL : `https://be-java-binar-fp-staging.up.railway.app`
+- Endpoint : `/v1/transactions/booking` or else
+- Headers :
+  - `Content-Type: application/json`
+  - `Accept: application/json`
+
+**Body :**
+
+```json
+{
+  "kost_id": "string",
+  "user_id": "string",
+  "capacity": "number",
+  "start_date": "date",
+  "payment_scheme": "string",
+  "addons_facilities": [{ "id": "number" }]
+}
+```
+
+**Response :** <Badge outline variant="success">201 Created</Badge>
+
+```json
+{
+  "status": "string",
+  "message": "string",
+  "data": {
+    "id": "string|number",
+    "name": "string",
+    "description": "string",
+    "images": ["string"],
+    "type": "string|enum",
+    "rating": "string",
+    "address": "string",
+    "superkost": "boolean",
+    "facilities": ["string"],
+    "rules": ["string"],
+    "coordinates": {
+      "long": "string",
+      "lat": "string"
+    },
+    "reviews": [
+      {
+        "id": "string",
+        "name": "string",
+        "image_url": "string",
+        "occupation": "string",
+        "content": "string",
+        "createdAt": "date"
+      }
+    ],
+    "owner": {
+      "id": "string",
+      "name": "string",
+      "phone_number": "string",
+      "survey?": "string",
+      "createdAt": "date"
+    }
+  }
+}
+```

@@ -1,0 +1,51 @@
+import Badge from "@components/built-in/Badge";
+
+## Add new Room `MVP`
+
+**Request :**
+
+- Method : <Badge method="GET">GET</Badge>
+- URL : `https://be-java-binar-fp-staging.up.railway.app`
+- Endpoint : `/v1/rooms/addroom` or else
+- Headers :
+  - `Content-Type: multipart/form-data`
+
+**Body :**
+
+```json
+{
+  "name": "string",
+  "images": ["file, png|jpg|jpeg"],
+  "quantity": "number",
+  "price": "number",
+  "length": "number",
+  "width": "number",
+  "max_person": "number",
+  "indoor_bathroom": "boolean",
+  "bathroom_facilities": [
+    {
+      "id": "number"
+    }
+  ],
+  "bedroom_facilities": [
+    {
+      "id": "number"
+    }
+  ],
+  "addons_facilities": [
+    {
+      "name": "string",
+      "price": "number"
+    }
+  ]
+}
+```
+
+**Response :** <Badge outline variant="success">201 Created</Badge>
+
+```json
+{
+  "status": "string",
+  "message": "string"
+}
+```

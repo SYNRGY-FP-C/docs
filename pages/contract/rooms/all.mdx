@@ -1,0 +1,56 @@
+import Badge from "@components/built-in/Badge";
+
+## Get All Rooms `MVP`
+
+**Request :**
+
+- Method : <Badge method="GET">GET</Badge>
+- Endpoint : `/v1/search?label=terbaru` or else
+- Headers :
+  - `Content-Type: application/json`
+  - `Accept: application/json`
+
+**Response :** <Badge outline variant="success">200 OK</Badge>
+
+```json
+{
+  "status": "string",
+  "message": "string",
+  "data": [
+    {
+      "id": "string|number",
+      "name": "string",
+      "label": "string",
+      "description": "string",
+      "images": ["string"],
+      "type": "string|enum",
+      "rating": "string",
+      "address": "string",
+      "superkost": "boolean",
+      "facilities": ["string"],
+      "rules": ["string"],
+      "coordinates": {
+        "long": "string",
+        "lat": "string"
+      },
+      "reviews": [
+        {
+          "id": "string",
+          "name": "string",
+          "image_url": "string",
+          "occupation": "string",
+          "content": "string",
+          "createdAt": "date"
+        }
+      ],
+      "owner": {
+        "id": "string",
+        "name": "string",
+        "phone_number": "string",
+        "survey?": "string",
+        "createdAt": "date"
+      }
+    }
+  ]
+}
+```
