@@ -1,6 +1,6 @@
 {
   "currentuser": "Get current user",
-  "password": "Change password",
   "profile": "Update profile",
-  "verificationaccount": "Update identity"
+  "verificationaccount": "Update identity",
+  "bankaccount": "Update Bank Account"
 }
