@@ -1,0 +1,29 @@
+import Badge from "@components/built-in/Badge";
+
+## Get Transaction Owner `MVP`
+
+**Request :**
+
+- Method : <Badge method="PUT">PUT</Badge>
+- URL : `https://be-java-binar-fp-staging.up.railway.app`
+- Endpoint : `/v1/transactions/owner/:id` or else
+- Headers :
+  - `Content-Type: application/json`
+  - `Accept: application/json`
+
+**Body :**
+
+```json
+{
+  "status": "string,approved|rejected"
+}
+```
+
+**Response :** <Badge outline variant="success">200 OK</Badge>
+
+```json
+{
+  "status": "string",
+  "message": "string"
+}
+```

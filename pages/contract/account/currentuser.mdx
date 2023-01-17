@@ -6,7 +6,7 @@ import Badge from "@components/built-in/Badge";
 
 - Method : <Badge method="GET">GET</Badge>
 - URL : `https://be-java-binar-fp-staging.up.railway.app`
-- Endpoint : `/v1/account/me`
+- Endpoint : `/v1/account/profile`
 - Headers :
   - `Authorization: Bearer <accessToken>`
   - `Content-Type: application/json`
@@ -32,6 +32,11 @@ import Badge from "@components/built-in/Badge";
     "verification": {
       "type": "string, enum",
       "photo": "file"
+    },
+    "bank": {
+      "bank_name": "string",
+      "account_number": "string",
+      "account_name": "string"
     }
   }
 }

@@ -1,0 +1,5 @@
+{
+  "getall": "Get all transactions",
+  "owner": "Get owner transactions",
+  "update": "Update transactions"
+}

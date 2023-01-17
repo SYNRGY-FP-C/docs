@@ -1,22 +1,15 @@
 import Badge from "@components/built-in/Badge";
 
-## Search Rooms `MVP`
+## Get All Transaction `MVP`
 
 **Request :**
 
 - Method : <Badge method="GET">GET</Badge>
 - URL : `https://be-java-binar-fp-staging.up.railway.app`
-- Endpoint : `/v1/search` or else
+- Endpoint : `/v1/transactions/history` or else
 - Headers :
   - `Content-Type: application/json`
   - `Accept: application/json`
-- Query Parameters :
-  - `keyword` : `string`
-  - `label` : `string`
-  - `type`: `string`
-  - `price_min`: `number`
-  - `price_max`: `number`
-  - `size`: `number`
 
 **Response :** <Badge outline variant="success">200 OK</Badge>
 
@@ -28,8 +21,8 @@ import Badge from "@components/built-in/Badge";
     {
       "id": "number",
       "name": "string",
+      "status": "string, onproccess|approved|rejected|ongoing|ended",
       "label": "string",
-      "price": "number",
       "thumbnail": "string",
       "address": "string",
       "type": "string",

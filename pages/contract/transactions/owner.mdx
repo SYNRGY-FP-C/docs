@@ -1,22 +1,15 @@
 import Badge from "@components/built-in/Badge";
 
-## Search Rooms `MVP`
+## Get Transaction Owner `MVP`
 
 **Request :**
 
 - Method : <Badge method="GET">GET</Badge>
 - URL : `https://be-java-binar-fp-staging.up.railway.app`
-- Endpoint : `/v1/search` or else
+- Endpoint : `/v1/transactions/owner` or else
 - Headers :
   - `Content-Type: application/json`
   - `Accept: application/json`
-- Query Parameters :
-  - `keyword` : `string`
-  - `label` : `string`
-  - `type`: `string`
-  - `price_min`: `number`
-  - `price_max`: `number`
-  - `size`: `number`
 
 **Response :** <Badge outline variant="success">200 OK</Badge>
 
@@ -27,13 +20,15 @@ import Badge from "@components/built-in/Badge";
   "data": [
     {
       "id": "number",
-      "name": "string",
-      "label": "string",
+      "name": "string, tenant name",
+      "account_created_date": "date",
+      "room_name": "string",
+      "room_thumbnail": "string",
+      "room_address": "string",
+      "room_type": "string",
+      "room_label": "string",
       "price": "number",
-      "thumbnail": "string",
-      "address": "string",
-      "type": "string",
-      "rating": "number"
+      "created_date": "date"
     }
   ]
 }
