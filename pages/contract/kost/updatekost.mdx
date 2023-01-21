@@ -8,6 +8,7 @@ import Badge from "@components/built-in/Badge";
 - URL : `https://be-java-binar-fp-staging.up.railway.app`
 - Endpoint : `/v1/kost/updatekost` or else
 - Headers :
+  - `Authorization: Bearer <accessToken>`
   - `Content-Type: multipart/form-data`
 
 **Body :**
@@ -15,19 +16,18 @@ import Badge from "@components/built-in/Badge";
 ```json
 {
   "name": "string",
-  "image_1": "file, png|jpg|jpeg",
-  "image_2": "file, png|jpg|jpeg",
+  "outdoor_photo": "file, png|jpg|jpeg",
+  "indoor_photo": "file, png|jpg|jpeg",
   "type": "string, enum",
   "description": "string",
-  "location": {
-    "long": "string",
-    "lat": "string",
-    "address": "string",
-    "province": "string",
-    "city": "string",
-    "district": "string",
-    "note": "string"
-  },
+  "longitude": "string",
+  "latitude": "string",
+  "address": "string",
+  "province": "string",
+  "city": "string",
+  "district": "string",
+  "adress_note": "string",
+  "additional_rule": "string",
   "payment_scheme": [
     {
       "id": "number"
@@ -38,7 +38,6 @@ import Badge from "@components/built-in/Badge";
       "id": "number"
     }
   ],
-  "additional_rule": "string",
   "facilities": [
     {
       "id": "number"
