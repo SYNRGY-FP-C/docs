@@ -4,6 +4,7 @@
   "otp": "OTP",
   "account": "Account",
   "kost": "Kost",
+  "transactions": "Transactions",
   "rooms": "Rooms/Kamar",
   "errors": "Errors"
 }
