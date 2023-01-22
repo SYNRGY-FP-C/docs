@@ -6,7 +6,7 @@ import Badge from "@components/built-in/Badge";
 
 - Method : <Badge method="PUT">PUT</Badge>
 - URL : `https://be-java-binar-fp-staging.up.railway.app`
-- Endpoint : `/v1/kost/updatekost` or else
+- Endpoint : `/v1/kost/update` or else
 - Headers :
   - `Authorization: Bearer <accessToken>`
   - `Content-Type: multipart/form-data`
@@ -15,6 +15,7 @@ import Badge from "@components/built-in/Badge";
 
 ```json
 {
+  "id": "number",
   "name": "string",
   "outdoor_photo": "file, png|jpg|jpeg",
   "indoor_photo": "file, png|jpg|jpeg",
