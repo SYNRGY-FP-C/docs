@@ -9,15 +9,16 @@ import Badge from "@components/built-in/Badge";
 - Endpoint : `/v1/kost/add` or else
 - Headers :
   - `Authorization: Bearer <access_token>`
-  - `Content-Type: multipart/form-data`
+  - `Content-Type: application/json`
+  - `Accept: application/json`
 
 **Body :**
 
 ```json
 {
   "name": "string",
-  "outdoor_photo": "file, png|jpg|jpeg",
-  "indoor_photo": "file, png|jpg|jpeg",
+  "outdoor_photo": "string, base64",
+  "indoor_photo": "string, base64",
   "type": "string, enum",
   "description": "string",
   "longitude": "string",

@@ -9,14 +9,15 @@ import Badge from "@components/built-in/Badge";
 - Endpoint : `/v1/rooms/add` or else
 - Headers :
   - `Authorization: Bearer <access_token>`
-  - `Content-Type: multipart/form-data`
+  - `Content-Type: application/json`
+  - `Accept: application/json`
 
 **Body :**
 
 ```json
 {
   "name": "string",
-  "images": ["file, png|jpg|jpeg"],
+  "images": ["string, base64"],
   "quantity": "number",
   "price": "number",
   "length": "number",
