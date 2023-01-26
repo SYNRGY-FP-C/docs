@@ -1,6 +1,7 @@
 {
   "all": "Get all kamar",
+  "addroom": "Add new kamar",
+  "updateroom": "Update kamar",
   "detail": "Get kamar by ID",
-  "submission": "Pengajuan kamar",
   "contact": "Get owner contact"
 }

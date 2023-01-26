@@ -1,0 +1,53 @@
+import Badge from "@components/built-in/Badge";
+
+## Update Room `MVP`
+
+**Request :**
+
+- Method : <Badge method="PUT">PUT</Badge>
+- URL : `https://be-java-binar-fp-staging.up.railway.app`
+- Endpoint : `/v1/rooms/update` or else
+- Headers :
+  - `Authorization: Bearer <access_token>`
+  - `Content-Type: application/json`
+  - `Accept: application/json`
+
+**Body :**
+
+```json
+{
+  "name": "string",
+  "images": ["string, base64"],
+  "quantity": "number",
+  "price": "number",
+  "length": "number",
+  "width": "number",
+  "max_person": "number",
+  "indoor_bathroom": "boolean",
+  "bathroom_facilities": [
+    {
+      "id": "number"
+    }
+  ],
+  "bedroom_facilities": [
+    {
+      "id": "number"
+    }
+  ],
+  "addons_facilities": [
+    {
+      "name": "string",
+      "price": "number"
+    }
+  ]
+}
+```
+
+**Response :** <Badge outline variant="success">200 Created</Badge>
+
+```json
+{
+  "status": "string",
+  "message": "string"
+}
+```

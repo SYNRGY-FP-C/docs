@@ -1,5 +1,6 @@
 {
   "getall": "Get all transactions",
   "owner": "Get owner transactions",
+  "submission": "Pengajuan kamar",
   "update": "Update transactions"
 }
