@@ -1,0 +1,37 @@
+import Badge from "@components/built-in/Badge";
+
+## Rating a room / kamar
+
+**Request :**
+
+- Method : <Badge method="GET">GET</Badge>
+- URL : `https://be-java-binar-fp-staging.up.railway.app`
+- Endpoint : `/v1/rooms/rating/:id` or else
+- Headers :
+  - `Content-Type: application/json`
+  - `Accept: application/json`
+- Query Parameters :
+  - `page` : `number`
+  - `size`: `number`
+
+**Body :**
+
+```json
+{
+  "status": "string",
+  "message": "string",
+  "data": [
+    {
+      "id": "number",
+      "name": "string",
+      "photo": "string",
+      "rating": "number",
+      "review": "string",
+      "occupation": "string",
+      "anonym": "boolean"
+    }
+  ]
+}
+```
+
+**Response :** <Badge outline variant="success">200 OK</Badge>

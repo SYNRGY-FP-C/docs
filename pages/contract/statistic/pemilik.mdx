@@ -1,24 +1,16 @@
 import Badge from "@components/built-in/Badge";
 
-## Change Password `MVP`
+## Statistic Pemilik `MVP`
 
 **Request :**
 
-- Method : <Badge method="PUT">PUT</Badge>
+- Method : <Badge method="GET">GET</Badge>
 - URL : `https://be-java-binar-fp-staging.up.railway.app`
-- Endpoint : `/v1/auth/password`
+- Endpoint : `/v1/statistic` or else
 - Headers :
   - `Authorization: Bearer <access_token>`
   - `Content-Type: application/json`
-
-**Body :**
-
-```json
-{
-  "password": "string",
-  "new_password": "string"
-}
-```
+  - `Accept: application/json`
 
 **Response :** <Badge outline variant="success">200 OK</Badge>
 
@@ -26,7 +18,12 @@ import Badge from "@components/built-in/Badge";
 {
   "status": "string",
   "message": "string",
-  "data": "object",
-  "error": "string"
+  "data": {
+    "id": "number",
+    "?": "number?",
+    "bookers": "number",
+    "occupants": "number",
+    "empty_rooms": "number"
+  }
 }
 ```

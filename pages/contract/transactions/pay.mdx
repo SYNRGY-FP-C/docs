@@ -1,23 +1,23 @@
 import Badge from "@components/built-in/Badge";
 
-## Update Transaction Status `MVP`
+## Payment Proof Upload `MVP`
 
 **Request :**
 
-- Method : <Badge method="PUT">PUT</Badge>
+- Method : <Badge method="POST">POST</Badge>
 - URL : `https://be-java-binar-fp-staging.up.railway.app`
-- Endpoint : `/v1/transactions/owner` or else
+- Endpoint : `/v1/transactions/payment` or else
 - Headers :
   - `Authorization: Bearer <access_token>`
-  - `Content-Type: application/json`
-  - `Accept: application/json`
+  - `Content-Type: multipart/form-data`
+  - `Accept: multipart/form-data`
 
 **Body :**
 
 ```json
 {
   "id": "number",
-  "status": "string, approved|rejected"
+  "image": "file, png|jpg|jpeg"
 }
 ```
 

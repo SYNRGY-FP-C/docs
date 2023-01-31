@@ -1,25 +1,16 @@
 import Badge from "@components/built-in/Badge";
 
-## Update Transaction Status `MVP`
+## Get all Kost `MVP`
 
 **Request :**
 
-- Method : <Badge method="PUT">PUT</Badge>
+- Method : <Badge method="GET">GET</Badge>
 - URL : `https://be-java-binar-fp-staging.up.railway.app`
-- Endpoint : `/v1/transactions/owner` or else
+- Endpoint : `/v1/kost` or else
 - Headers :
   - `Authorization: Bearer <access_token>`
   - `Content-Type: application/json`
   - `Accept: application/json`
-
-**Body :**
-
-```json
-{
-  "id": "number",
-  "status": "string, approved|rejected"
-}
-```
 
 **Response :** <Badge outline variant="success">200 OK</Badge>
 
@@ -27,7 +18,15 @@ import Badge from "@components/built-in/Badge";
 {
   "status": "string",
   "message": "string",
-  "data": "object",
+  "data": [
+    {
+      "id": "number",
+      "image": "string",
+      "label": "string",
+      "type": "string",
+      "address": "string"
+    }
+  ],
   "error": "string"
 }
 ```
