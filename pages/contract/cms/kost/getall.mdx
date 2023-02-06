@@ -1,0 +1,34 @@
+import Badge from "@components/built-in/Badge";
+
+## Get all kost
+
+**Request :**
+
+- Method : <Badge method="GET">GET</Badge>
+- URL : `https://backend-synrgy-fp-c.zekhoi.dev`
+- Endpoint : `/v1/kost`
+- Headers :
+  - `Authorization: Bearer <access_token>`
+  - `Content-Type: application/json`
+  - `Accept: application/json`
+
+**Response :** <Badge outline variant="success">200 OK</Badge>
+
+```json
+{
+  "status": "string",
+  "message": "string",
+  "data": [
+    {
+      "id": "number",
+      "kost_name": "string",
+      "indoor_photo_url": "string",
+      "kost_type": "string",
+      "city": "string",
+      "province": "string",
+      "address": "string",
+      "owner": "string"
+    }
+  ]
+}
+```

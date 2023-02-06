@@ -5,6 +5,8 @@
   "account": "Account",
   "kost": "Kost",
   "transactions": "Transactions",
+  "statistic": "Statistics",
+  "cms": "CMS",
   "rooms": "Rooms/Kamar",
   "errors": "Errors"
 }

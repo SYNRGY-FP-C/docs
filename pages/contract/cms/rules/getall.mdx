@@ -1,0 +1,28 @@
+import Badge from "@components/built-in/Badge";
+
+## Get all rules
+
+**Request :**
+
+- Method : <Badge method="GET">GET</Badge>
+- URL : `https://backend-synrgy-fp-c.zekhoi.dev`
+- Endpoint : `/v1/rules`
+- Headers :
+  - `Content-Type: application/json`
+  - `Accept: application/json`
+
+**Response :** <Badge outline variant="success">200 OK</Badge>
+
+```json
+{
+  "status": "string",
+  "message": "string",
+  "data": [
+    {
+      "id": "number",
+      "rule": "string",
+      "description": "string"
+    }
+  ]
+}
+```

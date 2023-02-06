@@ -1,0 +1,6 @@
+{
+  "create": "Create facility",
+  "update": "Update facility",
+  "getall": "Get all",
+  "getbyid": "Get by id"
+}

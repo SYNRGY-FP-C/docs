@@ -1,0 +1,6 @@
+{
+  "create": "Create rule",
+  "update": "Update rule",
+  "getall": "Get all",
+  "getbyid": "Get by id"
+}

@@ -1,0 +1,30 @@
+import Badge from "@components/built-in/Badge";
+
+## Get all kamar
+
+**Request :**
+
+- Method : <Badge method="GET">GET</Badge>
+- URL : `https://backend-synrgy-fp-c.zekhoi.dev`
+- Endpoint : `/v1/rooms`
+- Headers :
+  - `Authorization: Bearer <access_token>`
+  - `Content-Type: application/json`
+  - `Accept: application/json`
+
+**Response :** <Badge outline variant="success">200 OK</Badge>
+
+```json
+{
+  "status": "string",
+  "message": "string",
+  "data": [
+    {
+      "id": "number",
+      "name": "string",
+      "label": "string",
+      "price": "number"
+    }
+  ]
+}
+```

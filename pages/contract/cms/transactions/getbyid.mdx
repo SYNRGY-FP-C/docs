@@ -1,0 +1,45 @@
+import Badge from "@components/built-in/Badge";
+
+## Get transaction by id
+
+**Request :**
+
+- Method : <Badge method="GET">GET</Badge>
+- URL : `https://backend-synrgy-fp-c.zekhoi.dev`
+- Endpoint : `/v1/transactions/:id`
+- Headers :
+  - `Authorization: Bearer <access_token>`
+  - `Content-Type: application/json`
+  - `Accept: application/json`
+
+**Response :** <Badge outline variant="success">200 OK</Badge>
+
+```json
+{
+  "status": "string",
+  "message": "string",
+  "data": [
+    {
+      "id": "number",
+      "created_date": "date",
+      "is_deleted": "boolean",
+      "updated_date": "date",
+      "end_rent": "date",
+      "num_of_people": "number",
+      "price": "number",
+      "rental_duration": "number",
+      "rental_scheme": "string",
+      "start_rent": "date",
+      "status": "string",
+      "transaction_date": "date",
+      "url_document": "string",
+      "account_id": "number",
+      "payment_id": "number",
+      "room_kost_id": "number",
+      "addons_feature_price": "number",
+      "payment_scheme": "string",
+      "addons_facilities_price": "number"
+    }
+  ]
+}
+```

@@ -1,0 +1,27 @@
+import Badge from "@components/built-in/Badge";
+
+## Get facility by id
+
+**Request :**
+
+- Method : <Badge method="GET">GET</Badge>
+- URL : `https://backend-synrgy-fp-c.zekhoi.dev`
+- Endpoint : `/v1/facilities/:id`
+- Headers :
+  - `Content-Type: application/json`
+  - `Accept: application/json`
+
+**Response :** <Badge outline variant="success">200 OK</Badge>
+
+```json
+{
+  "status": "string",
+  "message": "string",
+  "data": {
+    "id": "number",
+    "facility_name": "string",
+    "is_active": "boolean",
+    "type": "string"
+  }
+}
+```
