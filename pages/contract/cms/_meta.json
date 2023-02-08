@@ -1,8 +1,9 @@
 {
+  "users": "Pengguna",
   "kost": "Kost",
   "kamar": "Kamar",
   "transactions": "Transaksi",
   "rules": "Peraturan",
   "facilities": "Fasilitas",
-  "statistics": "Statistik"
+  "statistic": "Statistik"
 }
