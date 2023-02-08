@@ -1,8 +1,12 @@
 {
-  "all": "Get all kamar",
+  "search": "Search kamar",
   "byowner": "Get kamar by owner",
   "addroom": "Add new kamar",
+  "kamaredit": "Get kamar for edit",
   "updateroom": "Update kamar",
+  "delete": "Delete kamar",
   "detail": "Get kamar by ID",
-  "contact": "Get owner contact"
+  "contact": "Get owner contact",
+  "getrating": "Get kamar rating",
+  "addrating": "Add kamar rating"
 }
