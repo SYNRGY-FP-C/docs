@@ -1,0 +1,32 @@
+import Badge from "@components/built-in/Badge";
+
+## Kamar by owner
+
+**Request :**
+
+- Method : <Badge method="GET">GET</Badge>
+- URL : `https://be-java-binar-fp-staging.up.railway.app`
+- Endpoint : `/v1/rooms` or else
+- Headers :
+  - `Authorization: Bearer <access_token>`
+  - `Content-Type: application/json`
+  - `Accept: application/json`
+
+**Response :** <Badge outline variant="success">200 OK</Badge>
+
+```json
+{
+  "status": "string",
+  "message": "string",
+  "data": {
+    "id": "number",
+    "name": "string",
+    "label": "string",
+    "price": "number",
+    "thumbnail": "string",
+    "address": "string",
+    "type": "string",
+    "rating": "number"
+  }
+}
+```
