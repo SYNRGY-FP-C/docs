@@ -1,0 +1,48 @@
+import Badge from "@components/built-in/Badge";
+
+## By ID Kost `MVP`
+
+**Request :**
+
+- Method : <Badge method="GET">GET</Badge>
+- URL : `https://be-java-binar-fp-staging.up.railway.app`
+- Endpoint : `/v1/kost/:id` or else
+- Headers :
+  - `Authorization: Bearer <access_token>`
+  - `Content-Type: application/json`
+  - `Accept: application/json`
+
+**Response :** <Badge outline variant="success">200 OK</Badge>
+
+```json
+{
+  "status": "string",
+  "message": "string",
+  "data": {
+    "id": "number",
+    "name": "string",
+    "outdoor_photo": "string, base64",
+    "indoor_photo": "string, base64",
+    "type": "string, enum",
+    "description": "string",
+    "longitude": "string",
+    "latitude": "string",
+    "address": "string",
+    "province": "string",
+    "city": "string",
+    "district": "string",
+    "adress_note": "string",
+    "additional_rule": "string",
+    "payment_scheme": [
+      {
+        "id": "number"
+      }
+    ],
+    "rules": [
+      {
+        "id": "number"
+      }
+    ]
+  }
+}
+```
